@@ -151,7 +151,7 @@ public class Person {
     public void setAlive(boolean alive) {
         this.alive = alive;
     }
-
+    
     /**
      * @{inheritdoc}
      */
