@@ -51,5 +51,13 @@ public class RegistryTest {
         
         Assert.assertEquals(RegisterResult.DUPLICATED, result2);
     }
-    // TODO Complete with more test cases
+    
+    @Test
+    public void validateValidAge() {
+        Person person = new Person("Carlitos", 123, -5, MALE, true);
+        RegisterResult result = registry.registerVoter(person);
+
+        Assert.assertEquals(RegisterResult.INVALID_AGE, result);
+    }
+    
 }

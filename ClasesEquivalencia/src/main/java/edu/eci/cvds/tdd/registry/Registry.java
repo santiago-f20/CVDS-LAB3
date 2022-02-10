@@ -6,10 +6,7 @@ package edu.eci.cvds.tdd.registry;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author santiago.fetecua
- */
+
 public class Registry {
     
     private Person person;
@@ -19,19 +16,19 @@ public class Registry {
         this.person = p;
         
         RegisterResult result = null;
-        if (person.getAge() < 18){
+        if (person.getAge()> 0 && person.getAge() < 18){
             result = RegisterResult.UNDERAGE;
         } else if(person.isAlive() == false){
             result = RegisterResult.DEAD;
         } else if(registros.contains(p.getId())){
             result = RegisterResult.DUPLICATED;
-        }
-        else{
+        } else if (person.getAge() < 0){
+            result = RegisterResult.INVALID_AGE;
+        }else{
             result = RegisterResult.VALID;
             registros.add(p.getId());
         }
         return result;
     }
-    
-    
 }
+ 
