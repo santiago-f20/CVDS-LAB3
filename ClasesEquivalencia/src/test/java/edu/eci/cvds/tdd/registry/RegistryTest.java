@@ -59,5 +59,4 @@ public class RegistryTest {
 
         Assert.assertEquals(RegisterResult.INVALID_AGE, result);
     }
-    
 }

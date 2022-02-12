@@ -6,9 +6,7 @@ package edu.eci.cvds.tdd.registry;
 
 import java.util.ArrayList;
 
-
 public class Registry {
-    
     private Person person;
     private ArrayList<Integer> registros = new ArrayList<>();
     
